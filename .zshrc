@@ -81,4 +81,6 @@ if [[ $(uname) == 'Linux' ]]; then
     fi
 elif [[ $(uname) == 'Darwin' ]]; then
     alias ls='ls -G'
+    # for homebrew
+    export PATH=/usr/local/bin:$PATH
 fi
