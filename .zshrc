@@ -54,6 +54,10 @@ export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 export EDITOR=/usr/bin/nano
 export VISUAL=/usr/bin/nano
 
+# Go
+export GOPATH=$HOME/Projekte/go
+export PATH=$GOPATH/bin:$PATH
+
 setopt interactivecomments
 
 alias grep='grep --color=auto'
