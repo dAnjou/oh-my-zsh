@@ -82,6 +82,7 @@ if [[ $(uname) == 'Linux' ]]; then
     else
         export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
         source "$HOME/.local/bin/virtualenvwrapper.sh"
+        export PATH=$HOME/.gem/ruby/2.0.0/bin:$PATH
     fi
 elif [[ $(uname) == 'Darwin' ]]; then
     alias ls='ls -G'
