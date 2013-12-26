@@ -58,21 +58,29 @@ export VISUAL=/usr/bin/nano
 export GOPATH=$HOME/Projekte/go
 export PATH=$GOPATH/bin:$PATH
 
+# Pivotal
+export PIVOTAL_TOKEN='0a19db13ddb62ba49f966b6c2475b0d8'
+alias piv='pivotal_tools'
+
 setopt interactivecomments
 
+# grep
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+# ls
 alias ll='ls -l'
 alias la='ls -A'
 alias lah='ls -lah'
 alias l='ls -CF'
 alias rs='reset'
-alias df='pydf'
+
+# utils
 alias heiseping='ping heise.de'
 alias bc='bc -lq .bcrc'
-alias aufraeumen='yes | sudo apt-get autoremove && yes | sudo apt-get autoclean'
-alias miniwebserver='echo Port 8000 && webfsd -Fp 8000'
+alias gg='git grep'
+alias s='subl3'
 
 if [[ $(uname) == 'Linux' ]]; then
     alias ls='ls --color=auto'
