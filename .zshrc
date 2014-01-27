@@ -59,7 +59,6 @@ export GOPATH=$HOME/Projekte/go
 export PATH=$GOPATH/bin:$PATH
 
 # Pivotal
-export PIVOTAL_TOKEN='0a19db13ddb62ba49f966b6c2475b0d8'
 alias piv='pivotal_tools'
 
 setopt interactivecomments
