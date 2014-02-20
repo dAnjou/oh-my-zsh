@@ -58,8 +58,11 @@ export VISUAL=/usr/bin/nano
 export GOPATH=$HOME/Projekte/go
 export PATH=$GOPATH/bin:$PATH
 
+## viasto
 # Pivotal
 alias piv='pivotal_tools'
+# Django
+export DJANGO_SETTINGS_MODULE=webhire.settings_vagrant_local
 
 setopt interactivecomments
 
