@@ -63,8 +63,8 @@ export PATH=$GOPATH/bin:$PATH
 alias piv='pivotal_tools'
 # Django
 export DJANGO_SETTINGS_MODULE=webhire.settings_vagrant_local
-# Fucking Ruby
-export PATH=$HOME/.gem/ruby/1.9.1/bin:$PATH
+# Chef DK
+eval "$(chef shell-init zsh)"
 
 setopt interactivecomments
 
