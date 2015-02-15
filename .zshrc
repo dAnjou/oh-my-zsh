@@ -55,8 +55,9 @@ export EDITOR=/usr/bin/nano
 export VISUAL=/usr/bin/nano
 
 # Go
-export GOPATH=$HOME/Projekte/go
-export PATH=$GOPATH/bin:$PATH
+export GOROOT=$HOME/Projekte/go
+export GOPATH=$HOME/Projekte/go_projects
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 ## viasto
 # Pivotal
