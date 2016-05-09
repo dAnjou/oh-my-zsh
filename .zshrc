@@ -60,10 +60,6 @@ export GOPATH=$HOME/Projekte/go_projects
 export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 ## viasto
-# Pivotal
-alias piv='pivotal_tools'
-# Django
-export DJANGO_SETTINGS_MODULE=webhire.settings_vagrant_local
 # Chef DK
 eval "$(chef shell-init zsh)"
 
@@ -80,25 +76,3 @@ alias la='ls -A'
 alias lah='ls -lah'
 alias l='ls -CF'
 alias rs='reset'
-
-# utils
-alias heiseping='ping heise.de'
-alias bc='bc -lq .bcrc'
-alias gg='git grep'
-alias s='subl3'
-
-if [[ $(uname) == 'Linux' ]]; then
-    alias ls='ls --color=auto'
-    if [[ $(hostname) == 'orion.uberspace.de' ]]; then
-        export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
-        source "$HOME/bin/virtualenvwrapper.sh"
-    else
-        export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
-        source "$HOME/.local/bin/virtualenvwrapper.sh"
-        export PATH=$HOME/.gem/ruby/2.0.0/bin:$PATH
-    fi
-elif [[ $(uname) == 'Darwin' ]]; then
-    alias ls='ls -G'
-    # for homebrew
-    export PATH=/usr/local/bin:$PATH
-fi
