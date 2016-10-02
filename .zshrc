@@ -61,10 +61,6 @@ export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 source /usr/share/autojump/autojump.sh
 
-## viasto
-# Chef DK
-eval "$(chef shell-init zsh)"
-
 setopt interactivecomments
 
 # grep
