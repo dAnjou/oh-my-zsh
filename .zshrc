@@ -59,7 +59,7 @@ export GOROOT=$HOME/Projekte/go
 export GOPATH=$HOME/Projekte/go_projects
 export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
-source /usr/share/autojump/autojump.sh
+[[ -e /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
 
 setopt interactivecomments
 
