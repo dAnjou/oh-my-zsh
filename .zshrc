@@ -65,6 +65,14 @@ export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 # direnv
 type direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
 
+# Python virtualenv prompt
+show_virtual_env() {
+  if [ -n "$VIRTUAL_ENV" ]; then
+    echo "($(basename $VIRTUAL_ENV))"
+  fi
+}
+PS1='$(show_virtual_env)'$PS1
+
 setopt interactivecomments
 
 # grep
