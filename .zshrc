@@ -74,3 +74,5 @@ alias la='ls -A'
 alias lah='ls -lah'
 alias l='ls -CF'
 alias rs='reset'
+
+alias isodate='date -Iseconds'
