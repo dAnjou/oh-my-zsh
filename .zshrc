@@ -88,3 +88,4 @@ alias l='ls -CF'
 alias rs='reset'
 
 alias isodate='date -Iseconds'
+alias rename='prename'
