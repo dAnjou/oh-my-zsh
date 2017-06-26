@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="refined"
+#ZSH_THEME="refined"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -65,13 +65,16 @@ export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 # direnv
 type direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
 
+# powerline
+source /usr/share/powerline/zsh/powerline.zsh
+
 # Python virtualenv prompt
-show_virtual_env() {
-  if [ -n "$VIRTUAL_ENV" ]; then
-    echo "($(basename $VIRTUAL_ENV))"
-  fi
-}
-PS1='$(show_virtual_env)'$PS1
+#show_virtual_env() {
+#  if [ -n "$VIRTUAL_ENV" ]; then
+#    echo "($(basename $VIRTUAL_ENV))"
+#  fi
+#}
+#PS1='$(show_virtual_env)'$PS1
 
 setopt interactivecomments
 
