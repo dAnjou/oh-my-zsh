@@ -38,6 +38,9 @@ DISABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(environment terminal editor completion history directory spectrum alias utility prompt git command-not-found history-substring-search docker git-flow-completion aws)
 
+# maybe ~/bin is not already in the PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$PATH
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -47,9 +50,6 @@ zstyle ':completion:*' special-dirs true
 
 # Sort completions by modification time
 zstyle ':completion:*' file-sort access
-
-# maybe ~/bin is not already in the PATH
-export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 
 export EDITOR=/usr/bin/nano
 export VISUAL=/usr/bin/nano
