@@ -51,8 +51,10 @@ zstyle ':completion:*' special-dirs true
 # Sort completions by modification time
 zstyle ':completion:*' file-sort access
 
+# micro
 export EDITOR=/usr/bin/nano
-export VISUAL=/usr/bin/nano
+which micro > /dev/null 2>&1 && export EDITOR=$(which micro)
+export VISUAL=$EDITOR
 
 # Go
 export GOROOT=$HOME/Projekte/go
@@ -92,3 +94,4 @@ alias rs='reset'
 
 alias isodate='date -Iseconds'
 alias rename='prename'
+alias nano=$EDITOR
