@@ -70,6 +70,9 @@ type direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
 # pipenv
 type pipenv > /dev/null 2>&1 && eval "$(pipenv --completion)"
 
+# pip
+type pip > /dev/null 2>&1 && eval "$(pip completion --zsh)"
+
 # powerline
 source /usr/share/powerline/zsh/powerline.zsh
 
