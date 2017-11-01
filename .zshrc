@@ -67,6 +67,9 @@ export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 # direnv
 type direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
 
+# pipenv
+type pipenv > /dev/null 2>&1 && eval "$(pipenv --completion)"
+
 # powerline
 source /usr/share/powerline/zsh/powerline.zsh
 
