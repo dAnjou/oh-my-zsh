@@ -36,7 +36,7 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(environment terminal editor completion history directory spectrum alias utility prompt git command-not-found history-substring-search docker git-flow-completion aws)
+plugins=(environment terminal editor completion history directory spectrum alias utility prompt git command-not-found history-substring-search docker)
 
 # maybe ~/bin is not already in the PATH
 export PATH=$HOME/bin:$HOME/.local/bin:$PATH
