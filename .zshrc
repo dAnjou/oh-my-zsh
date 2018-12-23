@@ -62,7 +62,7 @@ export GOPATH=$HOME/Projects/go
 export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 # autojump
-[[ -e /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
+[[ -e /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.zsh
 
 # direnv
 type direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
