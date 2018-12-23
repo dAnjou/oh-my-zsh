@@ -76,6 +76,9 @@ type pip > /dev/null 2>&1 && eval "$(pip completion --zsh)"
 # powerline
 source /usr/share/powerline/zsh/powerline.zsh
 
+# rvm
+source /home/max/.rvm/scripts/rvm
+
 # Python virtualenv prompt
 #show_virtual_env() {
 #  if [ -n "$VIRTUAL_ENV" ]; then
@@ -101,3 +104,6 @@ alias rs='reset'
 alias isodate='date -Iseconds'
 alias rename='prename'
 alias nano=$EDITOR
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
