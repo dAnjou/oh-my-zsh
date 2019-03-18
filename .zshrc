@@ -36,10 +36,27 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(environment terminal editor completion history directory spectrum alias utility prompt git command-not-found history-substring-search docker)
+plugins=(
+  environment
+  terminal
+  editor
+  completion
+  history
+  directory
+  spectrum
+  alias
+  utility
+  prompt
+  git
+  command-not-found
+  history-substring-search
+  docker
+  autojump
+  zsh-nvm
+)
 
 # maybe ~/bin is not already in the PATH
-export PATH=$HOME/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/sbin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
@@ -61,9 +78,6 @@ export GOROOT=$HOME/Tools/go
 export GOPATH=$HOME/Projects/go
 export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
-# autojump
-[[ -e /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.zsh
-
 # direnv
 type direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
 
@@ -73,11 +87,21 @@ type pipenv > /dev/null 2>&1 && eval "$(pipenv --completion)"
 # pip
 type pip > /dev/null 2>&1 && eval "$(pip completion --zsh)"
 
-# powerline
-source /usr/share/powerline/zsh/powerline.zsh
+# rbenv
+type rbenv > /dev/null 2>&1 && eval "$(rbenv init -)"
 
-# rvm
-source /home/max/.rvm/scripts/rvm
+# jenv
+export PATH=$HOME/.jenv/bin:$PATH
+eval "$(jenv init -)"
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# powerline
+[[ -e /usr/share/powerline/zsh/powerline.zsh ]] && source /usr/share/powerline/zsh/powerline.zsh
+[[ -e /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh ]] && source /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+[[ -e ~/.oh-my-zsh/.iterm2_shell_integration.zsh ]] && source ~/.oh-my-zsh/.iterm2_shell_integration.zsh
 
 # Python virtualenv prompt
 #show_virtual_env() {
@@ -105,5 +129,4 @@ alias isodate='date -Iseconds'
 alias rename='prename'
 alias nano=$EDITOR
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+eval $(thefuck --alias)
