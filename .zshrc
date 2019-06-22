@@ -92,7 +92,7 @@ type rbenv > /dev/null 2>&1 && eval "$(rbenv init -)"
 
 # jenv
 export PATH=$HOME/.jenv/bin:$PATH
-eval "$(jenv init -)"
+type jenv > /dev/null 2>&1 && eval "$(jenv init -)"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -129,4 +129,4 @@ alias isodate='date -Iseconds'
 alias rename='prename'
 alias nano=$EDITOR
 
-eval $(thefuck --alias)
+type thefuck > /dev/null 2>&1 && eval $(thefuck --alias)
