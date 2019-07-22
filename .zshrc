@@ -77,6 +77,7 @@ type pipenv > /dev/null 2>&1 && eval "$(pipenv --completion)"
 
 # pip
 type pip > /dev/null 2>&1 && eval "$(pip completion --zsh)"
+type pip3 > /dev/null 2>&1 && eval "$(pip3 completion --zsh)"
 
 # rbenv
 type rbenv > /dev/null 2>&1 && eval "$(rbenv init -)"
