@@ -37,16 +37,7 @@ DISABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
-  environment
-  terminal
-  editor
-  completion
   history
-  directory
-  spectrum
-  alias
-  utility
-  prompt
   git
   command-not-found
   history-substring-search
