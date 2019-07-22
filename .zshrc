@@ -81,6 +81,7 @@ type direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
 type pipenv > /dev/null 2>&1 && eval "$(pipenv --completion)"
 
 # pip
+export PYTHONWARNINGS=$PYTHONWARNINGS,"ignore:DEPRECATION::pip._internal.cli.base_command"
 type pip > /dev/null 2>&1 && eval "$(pip completion --zsh)"
 type pip3 > /dev/null 2>&1 && eval "$(pip3 completion --zsh)"
 
