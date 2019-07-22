@@ -59,6 +59,11 @@ zstyle ':completion:*' special-dirs true
 # Sort completions by modification time
 zstyle ':completion:*' file-sort access
 
+autoload bashcompinit
+bashcompinit
+
+[[ -e $ZSH/stuff/gita-completion.bash ]] && source $ZSH/stuff/gita-completion.bash
+
 # micro
 export EDITOR=/usr/bin/nano
 which micro > /dev/null 2>&1 && export EDITOR=$(which micro)
